@@ -1,6 +1,6 @@
 /* disgusting */
 
-var interval = setInterval('check()', 100);
+var interval = setInterval('check', 100);
 function check() {
   if (document.getElementById('main-content')) {
     interval = window.clearInterval(interval);
