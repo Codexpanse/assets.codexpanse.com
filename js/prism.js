@@ -1,12 +1,14 @@
 /* disgusting */
 
 var interval = setInterval('check()', 100);
-function check()
-{
-  if (document.getElementById('main-content'))
-  {
-    interval=window.clearInterval(interval);
+function check() {
+  if (document.getElementById('main-content')) {
+    interval = window.clearInterval(interval);
+    doPrism();
+  }
+}
 
+function doPrism(){
 
     /* PrismJS 1.17.1
        https://prismjs.com/download.html#themes=prism&languages=python&plugins=line-numbers+toolbar+copy-to-clipboard */
@@ -17,5 +19,4 @@ function check()
     !function(){if("undefined"!=typeof self&&self.Prism&&self.document)if(Prism.plugins.toolbar){var r=window.ClipboardJS||void 0;r||"function"!=typeof require||(r=require("clipboard"));var i=[];if(!r){var o=document.createElement("script"),e=document.querySelector("head");o.onload=function(){if(r=window.ClipboardJS)for(;i.length;)i.pop()()},o.src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js",e.appendChild(o)}Prism.plugins.toolbar.registerButton("copy-to-clipboard",function(e){var t=document.createElement("button");return t.textContent="Copy",r?o():i.push(o),t;function o(){var o=new r(t,{text:function(){return e.code}});o.on("success",function(){t.textContent="Copied!",n()}),o.on("error",function(){t.textContent="Press Ctrl+C to copy",n()})}function n(){setTimeout(function(){t.textContent="Copy"},5e3)}})}else console.warn("Copy to Clipboard plugin loaded before Toolbar plugin.")}();
 
 
-  }
 }
